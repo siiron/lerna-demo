@@ -2,6 +2,7 @@
   "name": "lerna-demo",
   "private": true,
   "scripts": {
+    "spawn": "npm install && npm start",
     "start": "node_modules/.bin/lerna bootstrap && lerna run build",
     "bootstrap": "node_modules/.bin/lerna bootstrap",
     "clean": "npm run clean:lerna && npm run clean:root",
