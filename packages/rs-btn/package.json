@@ -1,6 +1,6 @@
 {
     "name": "@siiron/rs-btn",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "module": "index.js",
     "scripts": {
         "build": "cross-env BABEL_ENV=esmodules babel ./src/ --out-dir ./dist --copy-files"
@@ -9,11 +9,11 @@
         "registry": "https://registry.npmjs.org"
     },
     "devDependencies": {
-        "@siiron/rs-styles": "0.1.0",
         "@babel/cli": "7.8.4",
         "@babel/core": "7.8.6",
         "@babel/preset-env": "7.8.6",
-        "@babel/preset-react": "7.8.3",        
+        "@babel/preset-react": "7.8.3",
+        "@siiron/rs-styles": "^0.1.1",
         "classnames": "2.2.6",
         "cross-env": "7.0.0",
         "prop-types": "15.7.2"
