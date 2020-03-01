@@ -1,6 +1,6 @@
 {
     "name": "@siiron/rs-btn",
-    "version": "0.1.1",
+    "version": "0.1.0",
     "module": "index.js",
     "scripts": {
         "build": "cross-env BABEL_ENV=esmodules babel ./src/ --out-dir ./dist --copy-files"
