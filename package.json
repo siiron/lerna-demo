@@ -1,18 +1,40 @@
 {
-  "name": "lerna-demo",
-  "private": true,
-  "scripts": {
-    "spawn": "npm install && npm start",
-    "start": "node_modules/.bin/lerna bootstrap && lerna run build",
-    "bootstrap": "node_modules/.bin/lerna bootstrap",
-    "clean": "npm run clean:lerna && npm run clean:root",
-    "clean:lerna": "node_modules/.bin/lerna clean --yes",
-    "clean:root": "npx rimraf node_modules"
-  },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org"
-  },
-  "devDependencies": {
-    "lerna": "^3.20.2"
-  }
+    "name": "lerna-demo",
+    "private": true,
+    "scripts": {
+        "bootstrap": "lerna bootstrap",
+        "build": "lerna run build",
+        "clean:lerna": "lerna clean --yes",
+        "clean:root": "npx rimraf node_modules",
+        "clean:lock": "npx rimraf package-lock.json",
+        "clean": "npm run clean:lerna && npm run clean:root",
+        "spawn": "npm install && npm start",
+        "start": "lerna run build && lerna run start --scope @siiron/rs-demo"
+    },
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^11.0.0",
+        "@commitlint/config-conventional": "^11.0.0",
+        "commitizen": "^4.2.2",
+        "cz-conventional-changelog": "^3.3.0",
+        "husky": "^4.3.5",
+        "lerna": "^3.22.1"
+    },
+    "commitlint": {
+        "extends": [
+            "@commitlint/config-conventional"
+        ]
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    },
+    "husky": {
+        "hooks": {
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+        }
+    }
 }

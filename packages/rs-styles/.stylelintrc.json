@@ -1,0 +1,11 @@
+{
+    "extends": "stylelint-config-sass-guidelines",
+    "rules": {
+        "at-rule-disallowed-list": ["debug"],
+        "color-hex-length": "long",
+        "indentation": 4,
+        "max-nesting-depth": 4,
+        "selector-class-pattern": "^((rs-)([a-z]?[a-zA-Z0-9]+)*(__[a-z0-9]?[a-zA-Z0-9]+)*?(--[a-zA-Z0-9]+)*?)$",
+        "selector-no-qualifying-type": null
+    }
+}

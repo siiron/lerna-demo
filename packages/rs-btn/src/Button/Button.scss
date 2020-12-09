@@ -1,13 +1,12 @@
-@import "~@siiron/rs-styles/src/scss/main";
+@import '~@siiron/rs-styles/src/scss/main';
 
 .rs-btn {
+    background-color: $btn-bg-color;
+    border: 0;
+    border-radius: 3px;
+    color: $btn-txt-color;
+    font-family: inherit;
     font-size: 18px;
     line-height: 28px;
     padding: 12px 24px;
-    background-color: $btnBgColor;
-    // background-color: red;
-    color: $btnTxtColor;
-    border-radius: 3px;
-    border: 0;
-    font-family: inherit;
 }
