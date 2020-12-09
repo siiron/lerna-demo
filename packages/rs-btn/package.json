@@ -3,7 +3,8 @@
     "version": "0.1.0",
     "module": "index.js",
     "scripts": {
-        "build": "cross-env BABEL_ENV=esmodules babel ./src/ --out-dir ./dist --copy-files"
+        "build": "npm run lint && cross-env BABEL_ENV=esmodules babel ./src/ --out-dir ./dist --copy-files",
+        "lint": "npx stylelint \"./src/**/*.scss\""
     },
     "publishConfig": {
         "registry": "https://registry.npmjs.org"
@@ -16,6 +17,8 @@
         "@siiron/rs-styles": "^0.1.0",
         "classnames": "2.2.6",
         "cross-env": "7.0.0",
-        "prop-types": "15.7.2"
+        "prop-types": "15.7.2",
+        "stylelint-config-sass-guidelines": "^7.1.0",
+        "stylelint": "^13.7.2"
     }
 }
