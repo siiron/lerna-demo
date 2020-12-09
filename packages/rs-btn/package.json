@@ -4,6 +4,7 @@
     "module": "index.js",
     "scripts": {
         "build": "npm run lint && cross-env BABEL_ENV=esmodules babel ./src/ --out-dir ./dist --copy-files",
+        "format": "prettier --write \"./src/**/*.{js,jsx,json,md}\"",
         "lint": "npx stylelint \"./src/**/*.scss\""
     },
     "publishConfig": {
@@ -17,6 +18,11 @@
         "@siiron/rs-styles": "^0.1.0",
         "classnames": "^2.2.6",
         "cross-env": "^7.0.3",
+        "eslint-config-prettier": "^6.15.0",
+        "eslint-plugin-prettier": "^3.1.4",
+        "eslint-plugin-react": "^7.21.5",
+        "eslint": "^7.14.0",
+        "prettier": "^2.2.1",
         "prop-types": "15.7.2",
         "stylelint-config-sass-guidelines": "^7.1.0",
         "stylelint": "^13.7.2"
