@@ -7,6 +7,7 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
+                <p>Demo-time</p>
                 <Button text="Hello from rs-btn" className="my-class" />
             </header>
         </div>
