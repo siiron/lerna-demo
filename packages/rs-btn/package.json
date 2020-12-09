@@ -10,10 +10,10 @@
         "registry": "https://registry.npmjs.org"
     },
     "devDependencies": {
-        "@babel/cli": "7.8.4",
-        "@babel/core": "7.8.6",
-        "@babel/preset-env": "7.8.6",
-        "@babel/preset-react": "7.8.3",
+        "@babel/cli": "^7.12.8",
+        "@babel/core": "^7.12.9",
+        "@babel/preset-env": "^7.12.7",
+        "@babel/preset-react": "^7.12.7",
         "@siiron/rs-styles": "^0.1.0",
         "classnames": "2.2.6",
         "cross-env": "7.0.0",
