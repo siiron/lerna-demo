@@ -13,6 +13,7 @@
     "registry": "https://registry.npmjs.org"
   },
   "devDependencies": {
-    "lerna": "^3.20.2"
+    "lerna": "^3.20.2",
+    "commitizen": "^4.2.2"
   }
 }
