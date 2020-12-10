@@ -2,7 +2,7 @@
 
 .rs-btn {
     background-color: $btn-bg-color;
-    border: 0;
+    border: 1px solid $btn-border-color;
     border-radius: 3px;
     color: $btn-txt-color;
     font-family: inherit;
