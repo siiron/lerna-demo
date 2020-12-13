@@ -1,16 +1,17 @@
 {
     "name": "@siiron/rs-styles",
     "version": "0.2.1",
-    "publishConfig": {
-        "registry": "https://registry.npmjs.org"
+    "private": true,
+    "scripts": {
+        "build": "node_modules/.bin/node-sass ./src/ -o ./dist/",
+        "lint": "npx stylelint \"./src/**/*.scss\""
     },
     "devDependencies": {
         "node-sass": "^4.14.1",
         "stylelint": "^13.7.2",
         "stylelint-config-sass-guidelines": "^7.1.0"
     },
-    "scripts": {
-        "build": "node_modules/.bin/node-sass ./src/ -o ./dist/",
-        "lint": "npx stylelint \"./src/**/*.scss\""
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org"
     }
 }

@@ -4,15 +4,27 @@
     "scripts": {
         "bootstrap": "lerna bootstrap",
         "build": "lerna run build",
-        "clean:lerna": "lerna clean --yes",
-        "clean:root": "npx rimraf node_modules",
-        "clean:lock": "npx rimraf package-lock.json",
         "clean": "npm run clean:lerna && npm run clean:root",
+        "clean:lerna": "lerna clean --yes",
+        "clean:lock": "npx rimraf package-lock.json",
+        "clean:root": "npx rimraf node_modules",
         "spawn": "npm install && npm start",
         "start": "lerna run build && lerna run start --scope @siiron/rs-demo"
     },
-    "publishConfig": {
-        "registry": "https://registry.npmjs.org"
+    "husky": {
+        "hooks": {
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+        }
+    },
+    "commitlint": {
+        "extends": [
+            "@commitlint/config-conventional"
+        ]
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
     },
     "devDependencies": {
         "@commitlint/cli": "^11.0.0",
@@ -22,19 +34,7 @@
         "husky": "^4.3.5",
         "lerna": "^3.22.1"
     },
-    "config": {
-        "commitizen": {
-            "path": "./node_modules/cz-conventional-changelog"
-        }
-    },
-    "commitlint": {
-        "extends": [
-            "@commitlint/config-conventional"
-        ]
-    },
-    "husky": {
-        "hooks": {
-            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-        }
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org"
     }
 }
