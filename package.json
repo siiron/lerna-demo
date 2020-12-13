@@ -22,15 +22,15 @@
         "husky": "^4.3.5",
         "lerna": "^3.22.1"
     },
-    "commitlint": {
-        "extends": [
-            "@commitlint/config-conventional"
-        ]
-    },
     "config": {
         "commitizen": {
             "path": "./node_modules/cz-conventional-changelog"
         }
+    },
+    "commitlint": {
+        "extends": [
+            "@commitlint/config-conventional"
+        ]
     },
     "husky": {
         "hooks": {
